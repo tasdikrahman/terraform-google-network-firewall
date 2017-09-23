@@ -1,10 +1,12 @@
 ### firewall - Network Google Cloud Platform 
 
+Manages a firewall resource within GCE
+
 ##### Example (minimum)
 
 ```hcl
 module "firewall-ssh" {
-  source        = "github.com/tasdikrahman/terraform-gcp-network-firewall"
+  source        = "tasdikrahman/network-firewall/gcp"
   name          = "ssh"
   network       = "${data.google_compute_network.test-vpc.name}"
   protocol      = "tcp"
@@ -32,6 +34,12 @@ data "google_compute_network" "test-vpc" {
 | Name | Description |
 |------|-------------|
 | self_link | The URL of the created resource |
+
+## Docs:
+
+- module docs: 
+- https://www.terraform.io/docs/providers/google/r/compute_firewall.html
+- https://cloud.google.com/compute/docs/vpc/firewalls
 
 ### LICENSE
 
