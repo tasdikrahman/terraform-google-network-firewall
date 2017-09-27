@@ -6,7 +6,7 @@ Manages a firewall resource within GCE
 
 ```hcl
 module "firewall-ssh" {
-  source        = "tasdikrahman/network-firewall/gcp"
+  source        = "tasdikrahman/network-firewall/google"
   name          = "ssh"
   network       = "${data.google_compute_network.test-vpc.name}"
   protocol      = "tcp"
